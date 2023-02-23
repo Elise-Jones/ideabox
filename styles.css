@@ -146,3 +146,55 @@ button {
     /* font-weight: bold; */
     color: #1F1F3D
 }
+
+
+#fbody {
+    height: 100px;
+    width: 400px;
+    border: 2px solid #5356A4;
+    color: #1F1F3D;
+}
+
+#ftitle {
+    width: 400px;
+    height: 50px;
+    border: 2px solid #5356A4;
+    color: #1F1F3D;
+}
+
+form {
+    display: flex;
+    padding-left: 250px;
+    padding-top: 10px;
+    flex-direction: column;
+    font-family: 'Open Sans';
+    font-style: bold; 
+}
+/* .magnifyg{
+    height: 50px;
+    width: 50px;
+    background-color: #1F1F3D;
+    align-content: flex-end
+
+} */
+
+
+#searchbar {
+    /* display: flex; */
+    width: 400px;
+    border: 2px solid #5356A4;
+    color: #5356A4;
+    height: 50px;
+}
+
+::placeholder {
+    color: #5356A4;
+}
+
+#savebutton {
+    width: 400px;
+    height: 50px;
+    background-color: #1F1F3D;
+    color: #e9e9f3;
+    border: 2px solid #5356A4
+}
