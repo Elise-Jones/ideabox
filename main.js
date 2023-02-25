@@ -18,5 +18,25 @@ function generateIdea(event){
         ideaTitle.innerText = currentIdea.ideaTitle
         ideaBody.innerText = currentIdea.ideaBody
         savedIdeas.push(currentIdea)
+  
+    ideaCards.innerHTML +=
+
+    `<div class="idea-cards">
+            <p class="card-header">
+                    <img class="star" src="assets/red-star.svg"> 
+                    <img class="X" src="assets/delete.svg">
+                </p>
+                <p class="card-title" >
+                    <strong>${ideaBody.value}</strong>
+                </p>
+                <p class="card-body">
+                    <strong>${ideaTitle.value}</strong>
+                </p>
+                <div class ="card-footer">
+                    <img class="+" src="assets/comment.svg">
+                    <div class="comment">Comment</div>
+                    </div>
+                    <div>
+     `
 }
     
