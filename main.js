@@ -39,18 +39,3 @@ function generateIdea(event){
                     <div>
      `
 }
-    
-// function clearInput() {
-//     ideaCards.value = ""
-// }
-
-
-// function clearInput(){
-//     document.getElementById("idea-form").reset();
-// }
-
-// function clearInput(target) {
-//     if(target.value = 'clear input') {
-//         target.value = "";
-//     }
-// }
