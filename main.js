@@ -39,4 +39,3 @@ function generateIdea(event){
                     <div>
      `
 }
-    
