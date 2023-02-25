@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset = "utf-8">
+        <meta charset ="UTF-8">
         <link rel="stylesheet" href="./styles.css">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     </head>
@@ -15,34 +14,20 @@
                 <p class="border2"></p>
         </section>
         <section class="parent2">
-            <form style="font-family: Open Sans">
+            <form id="idea-form" style="font-family: Open Sans">
                 <label for="ftitle">Title</label>
                 <input type="text" id="ftitle" name="ftitle" ><br>
                 <label for="fbody">Body</label>
                 <input type="text" id="fbody"  name="fbody" ><br>
-                <input type="submit" value="Save" id="savebutton"><br>
-        <div class="searchholder">
+                <button class="save-button">Save</button> <br>
                 <input  type="text" placeholder="Search ideas" id="searchbar" >
-        </div>
             </form>
+        <div class="searchholder">
+        </div>
         </section>
         <section class="parent3">
-            <div class="idea-cards">
-                <p class="card-header">
-                    <img class="star" src="assets/red-star.svg"> 
-                    <img class="X" src="assets/delete.svg">
-                </p>
-                <p class="card-title" >
-                    <strong>Idea title</strong>
-                </p>
-                <p class="card-body">
-                    <strong>Idea body. Don't ever play yourself. Every chance I get, I water the plants, Lion! Cloth talk.</strong>
-                </p>
-                <div class ="card-footer">
-                    <img class="+" src="assets/comment.svg">
-                    <div class="comment">Comment</div>
-                    </div>
-            </div>
         </section>
-    </body>
+    <script src="Idea.js"></script>
+    <script src="main.js"></script>    
+</body>
 </html>
