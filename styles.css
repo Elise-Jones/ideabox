@@ -91,27 +91,39 @@
  }
  
  
- .idea-cards {
-    border: 2px solid #1F1f3D;
-    max-height: 225px;
-    width: 175px;
-    /* display:flex; */
-    margin-left: 20px;
-    margin-top: 20px;
-    /* padding-left: 25px;
-    padding-right: 25px; */
-    align-items: center;
-    justify-content: center;
-    background-color: #FFFFFF;
-    /* position: absolute; */
+ .card-header {
+    height: 30px;
+    width: 100%;
+    background-color: #3d1f24;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    margin: 0px;
+    display:flex;
     justify-content: space-between;
- 
- 
  }
  
+ .deleteIdeaButton {
+   background-color: #3d1f24;
+   padding-left: 0%;
+   margin-left: auto;
+   margin-right: 0%;
+   background-image: url(assets/delete.svg);
+   background-size:cover;
+   background-position: 0%;
+
+ }
  
- 
- 
+ .favoriteCardButton {
+   background-color: #3d1f24;
+   padding-left: 0%;
+   margin-left: 0%;
+   margin-right: auto;
+   background-image: url(assets/star-active.svg);
+   background-size:cover;
+   background-position: 0%;
+
+ }
  
  
  .card-header {
