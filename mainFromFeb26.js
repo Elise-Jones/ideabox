@@ -6,8 +6,6 @@ var cardTitle = document.querySelector('.card-title')
 var cardBody = document.querySelector('.card-body')
 var ideaCards = document.querySelector('.parent3')
 var savedIdeasButton = document.querySelector('.save-button')
-var starHidden = document.querySelector('.favorite')
-// var activeStarHidden = document.querySelector('.favoriteActive')
 
 
 
@@ -16,21 +14,23 @@ ideaTitle.addEventListener('input', saveButtonDisable)
 ideaBody.addEventListener('input', saveButtonDisable)
 savedIdeasButton.addEventListener('click', clearInput)
 ideaCards.addEventListener('click', deleteIdea)
-ideaCards.addEventListener('click', favoriteIdea)
-// starHidden.addEventListener('click', hideStar)
-// activeStarHidden.addEventListener('click', hideActiveStar)
-
-//generates idea card on DOM and stores in Data Model
+//add event listener when create card, use event.target to navigate the DOM to what the parent is. 
 function generateIdea(event){
    event.preventDefault()
    currentIdea = new Idea(ideaTitle.value, ideaBody.value)
        ideaTitle.innerText = currentIdea.ideaTitle
        ideaBody.innerText = currentIdea.ideaBody
-       savedIdeas.push(currentIdea) 
-       ideaCards.innerHTML +=
+       savedIdeas.push(currentIdea)
+
+
+   ideaCards.innerHTML +=
+//create, update and append and in order to append we'll have to target the p-tag
+//.createElement 
+
    `<div class="idea-cards">
+<<<<<<< Updated upstream
    <p class="card-header">
-    <button class = "favoriteCardButton"></button> <br>
+    <button class = "favoriteCardButton"></button>
       <button class="deleteIdeaButton"></button> <br>
    </p>
           <p class="card-title" >
@@ -45,10 +45,25 @@ function generateIdea(event){
               </div>
               <div>
 `
-  }
-   
-
-//clears form input
+=======
+        <p class="card-header">
+           <img class="star" src="assets/red-star.svg">
+           <button class="deleteIdeaButton"></button> <br>
+        </p>
+               <p class="card-title" >
+                   <strong>${ideaTitle.value}</strong>
+               </p>
+               <p class="card-body">
+                   <strong>${ideaBody.value}</strong>
+               </p>
+               <div class ="card-footer">
+                   <img class="+" src="assets/comment.svg">
+                   <div class="comment">Comment</div>
+                   </div>
+                   <div>
+    `
+>>>>>>> Stashed changes
+   }
 function clearInput(event) {
    event.preventDefault(event)
     if(ideaTitle.value = ''){
@@ -57,7 +72,6 @@ function clearInput(event) {
    saveButtonDisable()
    }
 
-//deletes idea card from DOM and Data Model
 function deleteIdea(event){
     console.log("hello")
     if (event.target.classList.contains('deleteIdeaButton')) {
@@ -71,35 +85,20 @@ function deleteIdea(event){
           }
      }
  
-// create a for loop, if statement with star booleans, if condition is met push them into the array 
-
-
-// hide star after click- might not need it 
-// function hideActiveStar () {
-
-// }
 
 // function favoriteIdea (event){
-// if (event.target.classList.contains('favoriteCardButton')) {
-//         event.target.closest('.idea-cards').updateIdea()
+// if (event.target.classList.contains('favoriteIdea')) {
+//         event.target.closest('.idea-cards').remove()
 //     } 
- 
-
-// //add favorite idea 
+//     console.log(event.target.closest('.idea-cards'))
 // for (var i = 0; i < ideaCards.length; i++) {
-//     if(savedIdeas[i].id == event.target.closest.id)
-//     ideas[i].updateIdea()
-
-//     // remove favoriteIdea
-//     for (var i = 0; i < ideaCards.length; i++) {
-//         if(savedIdeas[i].id == event.target.closest.id)
-//         savedIdeas.splice(i, 1)
+//     if(ideaCards[i].id == event.target.closest.id)
+//         ideaCards.splice(i, 1)
 //         event.target.closest.remove(event.target)
 //         }
 //      }
 
 
-//disabling save ideas button when blank
 savedIdeasButton.disabled = true;
 function saveButtonDisable(){
 if (ideaTitle.value !== "" && ideaBody.value !== ""){
@@ -107,6 +106,14 @@ if (ideaTitle.value !== "" && ideaBody.value !== ""){
 } else {
    savedIdeasButton.disabled = true;
 }
+
+
+function deleteIdeaButton(event){
+console.log("hello")
+    if (event.target.classList.contains('.idea-cards')) {
+    }
+    event.target.parentNode.remove()
+     }
 }
 
 
