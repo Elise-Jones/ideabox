@@ -1,58 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset ="UTF-8">
-        <link rel="stylesheet" href="./styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    </head>
-    <body class="container">
-        <section class="parent1">
-            <h1 style="font-family: Open Sans">IdeaBox</h1>
-            <p class="border"></p>
-            <h2 style="font-family: Open Sans">Filter Starred Ideas</h2>
-            <button class="starred-ideas">Show Starred Ideas</button>
-            <p class="border2"></p>
-        </section>
-        <section class="parent2">
-            <form id="idea-form" style="font-family: Open Sans">
-                <label for="ftitle">Title</label>
-                <input type="text" id="ftitle" name="ftitle" ><br>
-                <label for="fbody">Body</label>
-                <input type="text" id="fbody"  name="fbody" ><br>
-                <button class="save-button">Save</button> <br>
-                
-                <div class="searchbar">
-                    <div id="sb-search" class="sb-search">
-                        <div class="search-wrapper">
-                            <input class="search-input" placeholder="Search ideas..." type="text" value="" name="search" id="search"/>
-                            <img class="search-pic"src="assets/search.svg"/>
-                        </div>
-                    </div>
-                </div>
-            </form>
-
-            <div class="searchholder">
-            <!-- <button class ="delete-btn"><img src="assets/delete.svg" alt= "delete"></button> -->
+  <head>
+    <meta charset ="UTF-8">
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <title>IdeaBox</title>
+  </head>
+  <body class="container">
+    <section class="parent1">
+      <h1 style="font-family: Open Sans">IdeaBox</h1>
+      <div class="border"></div>
+      <h2 style="font-family: Open Sans">Filter Starred Ideas</h2>
+      <button class="starred-ideas">Show Starred Ideas</button>
+      <div class="border2"></div><br>
+    </section>
+    <section class="parent2">
+      <form id="ideaForm" style="font-family: Open Sans">
+        <label for="ftitle">Title</label>
+        <input type="text" id="ftitle" name="ftitle" ><br>
+        <label for="fbody">Body</label>
+        <input type="text" id="fbody"  name="fbody" ><br>
+        <button class="save-button">Save</button> <br>
+        <div class="searchbar">
+            <div id="sbSearch" class="sb-search">
+              <div class="search-wrapper">
+                <input class="search-input" placeholder="Search ideas..." type="text" value="" name="search" id="search"/>
+                <img class="search-pic" src="assets/search.svg" alt="magnifying glass"/>
+              </div>
+            </div>
         </div>
-        </section>
-        <section class="parent3">
-            <!-- <div class="idea-cards">
-                <p class="card-header">
-                    <img class="star" src="assets/red-star.svg">
-                    <button class="deleteIdeaButton"></button> <br>
-                </p>
-                       <p class="card-title" >
-                           <strong>${ideaTitle.value}</strong>
-                       </p>
-                       <p class="card-body">
-                           <strong>${ideaBody.value}</strong>
-                       </p>
-                       <div class ="card-footer">
-                           <img class="+" src="assets/comment.svg">
-                           <div class="comment">Comment</div>
-                           </div>
-                           <div> -->
-        </section>
+      </form>
+    </section>
+    <section class="parent3">
+    </section>
     <script src="Idea.js"></script>
     <script src="main.js"></script>    
 </body>
