@@ -6,103 +6,63 @@ var cardTitle = document.querySelector('.card-title')
 var cardBody = document.querySelector('.card-body')
 var ideaCards = document.querySelector('.parent3')
 var savedIdeasButton = document.querySelector('.save-button')
-var starHidden = document.querySelector('.favorite')
-// var activeStarHidden = document.querySelector('.favoriteActive')
-
-
 
 savedIdeasButton.addEventListener('click', generateIdea)
 ideaTitle.addEventListener('input', saveButtonDisable)
 ideaBody.addEventListener('input', saveButtonDisable)
 savedIdeasButton.addEventListener('click', clearInput)
 ideaCards.addEventListener('click', deleteIdea)
-ideaCards.addEventListener('click', favoriteIdea)
-// starHidden.addEventListener('click', hideStar)
-// activeStarHidden.addEventListener('click', hideActiveStar)
 
 //generates idea card on DOM and stores in Data Model
 function generateIdea(event){
-   event.preventDefault()
-   currentIdea = new Idea(ideaTitle.value, ideaBody.value)
-       ideaTitle.innerText = currentIdea.ideaTitle
-       ideaBody.innerText = currentIdea.ideaBody
-       savedIdeas.push(currentIdea) 
-       ideaCards.innerHTML +=
-   `<div class="idea-cards">
-   <p class="card-header">
+  event.preventDefault()
+  currentIdea = new Idea(ideaTitle.value, ideaBody.value)
+    ideaTitle.innerText = currentIdea.ideaTitle
+    ideaBody.innerText = currentIdea.ideaBody
+    savedIdeas.push(currentIdea) 
+    ideaCards.innerHTML +=
+`<div class="idea-cards">
+    <p class="card-header">
     <button class = "favoriteCardButton"></button> <br>
-      <button class="deleteIdeaButton"></button> <br>
-   </p>
-          <p class="card-title" >
-              <strong>${ideaTitle.value}</strong>
-          </p>
-          <p class="card-body">
-              <strong>${ideaBody.value}</strong>
-          </p>
-          <div class ="card-footer">
-              <img class="+" src="assets/comment.svg">
-              <div class="comment">Comment</div>
-              </div>
-              <div>
-`
-  }
+    <button class="deleteIdeaButton"></button> <br>
+    </p>
+    <p class="card-title" >
+      <strong>${ideaTitle.value}</strong>
+    </p>
+    <p class="card-body">
+      <strong>${ideaBody.value}</strong>
+    </p>
+<div class ="card-footer">
+    <img class="+" src="assets/comment.svg" alt="plus sign">
+<div class="comment">Comment</div> 
+</div>`  
+}
    
-
 //clears form input
 function clearInput(event) {
-   event.preventDefault(event)
-    if(ideaTitle.value = ''){
-   } if (ideaBody.value = ''){
+event.preventDefault(event)
+  if (ideaTitle.value = '') {
+   } if (ideaBody.value = '') {
    }
    saveButtonDisable()
    }
 
 //deletes idea card from DOM and Data Model
 function deleteIdea(event){
-    console.log("hello")
     if (event.target.classList.contains('deleteIdeaButton')) {
         event.target.closest('.idea-cards').remove()
     } 
-    console.log(event.target.closest('.idea-cards'))
     for (var i = 0; i < ideaCards.length; i++) {
-        if(ideaCards[i].id == event.target.closest.id)
+        if (ideaCards[i].id == event.target.closest.id)
           ideaCards.splice(i, 1)
           event.target.closest.remove(event.target)
           }
      }
- 
-// create a for loop, if statement with star booleans, if condition is met push them into the array 
-
-
-// hide star after click- might not need it 
-// function hideActiveStar () {
-
-// }
-
-// function favoriteIdea (event){
-// if (event.target.classList.contains('favoriteCardButton')) {
-//         event.target.closest('.idea-cards').updateIdea()
-//     } 
- 
-
-// //add favorite idea 
-// for (var i = 0; i < ideaCards.length; i++) {
-//     if(savedIdeas[i].id == event.target.closest.id)
-//     ideas[i].updateIdea()
-
-//     // remove favoriteIdea
-//     for (var i = 0; i < ideaCards.length; i++) {
-//         if(savedIdeas[i].id == event.target.closest.id)
-//         savedIdeas.splice(i, 1)
-//         event.target.closest.remove(event.target)
-//         }
-//      }
-
 
 //disabling save ideas button when blank
 savedIdeasButton.disabled = true;
 function saveButtonDisable(){
-if (ideaTitle.value !== "" && ideaBody.value !== ""){
+if (ideaTitle.value !== "" && ideaBody.value !== "") {
    savedIdeasButton.disabled = false;
 } else {
    savedIdeasButton.disabled = true;
@@ -113,12 +73,4 @@ if (ideaTitle.value !== "" && ideaBody.value !== ""){
     
        
 
-    //  var element = event.target
-    // if (event.target.classList.contains('.deleteIdeaButton')) {
-    //     for(var i=0; i<savedIdeas.length; i++){
-    //         if(element.parentNode.id || element.id === savedIdeas[i].id)
-    //         savedIdeas.splice(i, 1)
-    //     }
-    // } 
-    // event.target.parentElement.remove()
-    //  }
+ 
